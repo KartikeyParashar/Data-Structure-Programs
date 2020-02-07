@@ -12,8 +12,10 @@ from Data_Structure_Utils.stack import Stack
 
 object_of_class_Stack = Stack()
 
+
 def main1():
-    expression = input("Enter any Artithmetic Expression: ")
+    expression = input("Enter any Arithmetic Expression: ")
     object_of_class_Stack.check_parenthesis_balance(expression)
+
 
 main1()

@@ -17,9 +17,11 @@ class Stack:
     def size_of_stack(self):
         return len(self.items)
 
-    def check_parenthesis_balance(self,expression):
+    def check_parenthesis_balance(self, expression):
         open_parenthesis = "([{"
         close_parenthesis = ")]}"
+
+        balance = True
 
         for bracket in expression:
             if bracket in open_parenthesis:
@@ -29,11 +31,6 @@ class Stack:
                     balance = False
                     break
                 self.pop()
-
-        if self.is_empty():
-            balance = True
-        else:
-            balance = False
 
         if balance:
             print(f"The inputted expression : {expression}  is balanced")
