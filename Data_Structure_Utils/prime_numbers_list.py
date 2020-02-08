@@ -1,9 +1,8 @@
 import math
 
-prime = []
-
 
 def prime_in_range(number):
+    prime = []
     for num in range(2, number + 1):
         flag = 1
         for num1 in range(2, int(math.sqrt(num)) + 1):
