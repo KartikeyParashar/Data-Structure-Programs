@@ -10,12 +10,31 @@ def main():
             prime_anagram.append(int(prime_num))
         else:
             prime_not_anagram.append(int(prime_num))
-    print("Prime Anagram numbers are is :")
-    print(prime_anagram)
-
+    print("Prime Anagram numbers are :")
+    for num in prime_anagram:
+        if lower_limit < num < higher_limit:
+            print(num,end = ' ')
+        else : 
+            print()
+            print(num,end=' ')
+            lower_limit = higher_limit
+            higher_limit = lower_limit + 100
+            while num not in range(lower_limit,higher_limit+1):
+                lower_limit = higher_limit
+                higher_limit = lower_limit + 100
+                
     print("\nPrime numbers which are not anagram are: ")
-    print(prime_not_anagram)
+    for num in prime_not_anagram:
+        if lower_limit < num < higher_limit:
+            print(num,end = ' ')
+        else : 
+            print()
+            print(num,end=' ')
+            lower_limit = higher_limit
+            higher_limit = lower_limit + 100
+            while num not in range(lower_limit,higher_limit+1):
+                lower_limit = higher_limit
+                higher_limit = lower_limit + 100
 
-
+                
 main()
-
