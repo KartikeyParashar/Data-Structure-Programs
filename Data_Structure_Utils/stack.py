@@ -24,15 +24,17 @@ class Stack:
         balance = True
 
         for bracket in expression:
-            if bracket in open_parenthesis:
+
+            print(bracket)
+            if bracket in "([{":
                 self.push(bracket)
             elif bracket in close_parenthesis:
-                if self.is_empty():
-                    balance = False
-                    break
                 self.pop()
+                # if self.is_empty():
+                #     balance = False
+                #     break
 
-        if balance:
+        if self.is_empty():
             print(f"The inputted expression : {expression}  is balanced")
         else:
             print(f"The inputted expression : {expression} is not balanced")
