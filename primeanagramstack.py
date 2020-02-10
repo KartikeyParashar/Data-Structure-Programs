@@ -7,15 +7,15 @@ def main():
     prime_in_range(1000)
     obj_of_ll = Linked_List()
 
-    prime_anagram = []
-
     for num in prime:
         if num[::-1] in prime:
-            prime_anagram.append(num)
+            obj_of_ll.insert_at_start(num)
 
-    for num in range(len(prime_anagram)-1,0,-1):
-        print(prime_anagram[num], end=' ')
+    obj_of_ll.traverse()
+    for num in obj_of_ll.elements:
+        print(num, end=" ")
 
+        
+main()        
 
-main()
 
