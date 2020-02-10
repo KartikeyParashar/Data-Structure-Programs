@@ -12,35 +12,32 @@ def main():
             prime_not_anagram.append(int(prime_num))
     lower_limit = 0
     higher_limit = lower_limit + 100
+    arr_anagram = []
+    arr_not_anagram = []
     print("Prime Anagram numbers are :")
-    for num in prime_anagram:
-        if lower_limit < num < higher_limit:
-            print(num,end = ' ')
-        lower_limit = 0
-    higher_limit = lower_limit + 100else : 
-            print()
-            print(num,end=' ')
-            lower_limit = higher_limit
-            higher_limit = lower_limit + 100
-            while num not in range(lower_limit,higher_limit+1):
-                lower_limit = higher_limit
-                higher_limit = lower_limit + 100
-                
-   
-    lower_limit = 0
-    higher_limit = lower_limit + 100            
-    print("\nPrime numbers which are not anagram are: ")
-    for num in prime_not_anagram:
-        if lower_limit < num < higher_limit:
-            print(num,end = ' ')
-        else : 
-            print()
-            print(num,end=' ')
-            lower_limit = higher_limit
-            higher_limit = lower_limit + 100
-            while num not in range(lower_limit,higher_limit+1):
-                lower_limit = higher_limit
-                higher_limit = lower_limit + 100
+    for i in range(1, 11):
+        arr = []
+        for num in prime_anagram:
+            if lower_limit < num < higher_limit:
+                arr.append(num)
+        arr_anagram.append(arr)
+        lower_limit = higher_limit
+        higher_limit = lower_limit + 100
+    print(arr_anagram)
 
-                
+    lower_limit = 0
+    higher_limit = lower_limit + 100
+    print("\nPrime numbers which are not anagram are: ")
+    for i in range(1, 11):
+        arr = []
+        for num in prime_not_anagram:
+            if lower_limit < num < higher_limit:
+                arr.append(num)
+        arr_not_anagram.append(arr)
+        lower_limit = higher_limit
+        higher_limit = lower_limit + 100
+    print(arr_not_anagram)
+
+
 main()
+
